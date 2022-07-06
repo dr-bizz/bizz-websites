@@ -6,6 +6,7 @@ require("dotenv").config();
 // Grab server keys
 const port = process.env.PORT || 3000
 const API_URL = process.env.API_URL || 'http://localhost:1337'
+const bizz_websites_email = process.env.BIZZ_WEBSITES_EMAIL
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -30,7 +31,7 @@ app.prepare()
         console.log("Contact Submited: ", req.body)
         const {fname, lname, email, phone} = req.body
         const name = fname + " " + lname
-        const to = "daniel@bizz-websites.com"
+        const to = bizz_websites_email
         const subject = `Contact Submission on Bizz Websites | From ${name}`
         const message = "Hey Daniel,<br/>I hope you are well.<br/> We have had another contact form submission, please read the below:<br/><br/><b>Name:</b>" + name + "<br/><br/><b>Message</b><br/>" +  req.body.message + "<br/><br/><b>Phone:</b>" + phone + "<br/><br/><b>Email:</b>" + email
         mailer({ to, email, subject, name, html: message }).then(() => {
@@ -47,7 +48,7 @@ app.prepare()
         console.log("Hire Bizz Websites Submited: ", req.body)
         const {fname, lname, email, phone, company, website, howheard, services} = req.body
         const name = fname + " " + lname
-        const to = "daniel@bizz-websites.com"
+        const to = bizz_websites_email
         const subject = `Hire Bizz Websites Submission | From ${name}`
         let message = "Hey Daniel,<br/>I hope you are well.<br/> Someone has requested to work with you, please read the below:"
         message = message + "<br/><br/><b>Name: </b>" + name
