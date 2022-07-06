@@ -1,0 +1,339 @@
+.featured {
+    padding: 50px 0;
+
+    @media (max-width: 575px) {
+        padding: 50px 0 30px;
+    }
+    .page-container {
+        @include flex();
+        justify-content: space-between;
+
+        @media (max-width: 800px) {
+            justify-content: space-around;
+        }
+    }
+
+    &--blog {
+        @include flex-child(60%);
+
+        @media (max-width: 450px) {
+            @include flex-child(100%);
+        }
+    }
+
+    &--blog--two {
+        @include flex-child(35%);
+
+        @media (max-width: 450px) {
+            @include flex-child(100%);
+        }
+
+        .article--image {
+            @media (min-width: 801px) {
+                padding-bottom: 94%;
+            }
+        }
+    }
+
+    &--blog,
+    &--blog--two {
+     
+        @media (max-width: 950px) {
+            h3 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            @include flex-child(40%);
+        }
+
+        @media (max-width: 800px) {
+            h3 {
+                font-size: 16px; 
+            }
+
+            .article--date {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            @include flex-child(70%);
+            margin-top: 40px;
+            //padding-bottom: 70%;
+        }
+
+        @media (max-width: 450px) {
+            @include flex-child(90%);
+            //padding-bottom: 90%;
+        }
+    }
+}
+
+.article {
+
+    article {
+        background: $white;
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+        top: 0;
+        @include prefix(transition, all .3s ease 0s);
+
+        a {
+            text-decoration: none;;
+        }
+    }
+
+    &--categories {
+        padding: 15px 0 0 15px;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+
+        span {
+            background: $secondary;
+            color: $white;
+            padding: 5px 15px;
+            line-height: 1;
+            border-radius: 3px;
+            margin-left: 8px;
+
+            @media (max-width: 950px) {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &--inner {
+
+        h3 {
+            margin: 0;
+        }
+
+        span {
+            opacity: 0.6;
+        }
+
+        p {
+            margin: 5px 0 0 0;
+        }
+    }
+
+    &--image {
+        position: relative;
+        padding-bottom: 55%;
+        overflow: hidden;
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: 0;
+        top: 0;;
+        @include prefix(transition, all .3s ease 0s);
+        @include prefix(transform, scale(1));
+    }
+
+    article:hover {
+        top: -7.5px;
+        img {
+            @include prefix(transform, scale(1.05));
+        }
+    }
+}
+
+section.articles {
+    padding: 0 0 50px;
+    
+
+    .page-container {
+        @include flex();
+        align-items: flex-start;
+    }
+
+    .sidebar {
+        @include flex-child(20%);
+
+        @media (max-width: 900px) {
+            @include flex-child(25%);
+        }
+
+        @media (max-width: 700px) {
+            @include flex-child(100%);
+        }
+
+        @media (max-width: 700px) and (min-width: 576px) {
+            margin-bottom: 40px;
+        }
+
+    }
+    
+    .article {
+        @include flex();
+        @include flex-child(80%);
+        justify-content: space-around;
+
+        @media (max-width: 900px) {
+            @include flex-child(75%);
+        }
+
+        @media (max-width: 700px) {
+            @include flex-child(100%);
+        }
+    }
+
+    article {
+        margin-top:40px;
+        @include flex-child(30%);
+
+        @media (max-width: 900px) {
+            @include flex-child(45%);
+        }
+
+        @media (max-width: 700px) {
+            @include flex-child(40%);
+            margin-top: 30px
+        }
+        @media (max-width: 480px) {
+            @include flex-child(70%);
+        }
+
+        @media (max-width: 450px) {
+            @include flex-child(90%);
+        }
+
+        @media (min-width: 576px) {
+            &:first-child,
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+        }
+        @media (min-width: 901px) {
+            &:nth-child(3) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    h3 {
+        font-size: 17px;
+        @media (max-width: 1050px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 380px) {
+            font-size: 14px;
+        }
+    }
+
+    .article--date {
+        font-size: 15px;
+        @media (max-width: 1050px) {
+            font-size: 14px;
+        }
+    }
+    
+    &.full-width {
+        padding: 50px 0;
+        .article {
+            @include flex-child(100%);
+        }
+    }
+    &__more-blogs {
+        padding-bottom: 50px;
+        .button {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+.sidebar {
+    background: $lightest-blue;
+    border-radius: 6px;
+
+    .main-topic {
+        a {
+            font-weight: 500;
+            font-size:16px;
+            padding: 15px 0 0px;
+        }
+
+        &:first-child {
+            a {
+                padding-top: 0;
+            }
+        }
+    }
+
+    li:not(.main-topic) a {
+        font-size: 15px;
+    }
+
+    a {
+        color: $base-font-color;
+        padding: 5px 0;
+        display: block;
+
+        &:hover {
+            color: $tertiary;
+        }
+    }
+
+    .sidebar--topics {
+        padding: 15px;
+    }
+
+    &.hide {
+        .sidebar--topics {
+            @media (max-width: 700px) {
+                max-height: 0px;
+                overflow: hidden;
+                @include prefix(transition, all .3s ease 0s);
+                padding: 0;
+            }
+        }
+
+        .toggle-categories {
+           &:after {
+            @include prefix(transform, rotate(0deg));
+            }
+        }
+    }
+
+    .toggle-categories {
+        display: none;
+        @media (max-width: 700px) {
+            display: block;
+            padding: 20px 15px;
+            position: relative;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: 15px;
+            top: calc(50% - 15px);
+            background-image: url(/icon-arrow.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            @include prefix(transition, all .3s ease 0s);
+            @include prefix(transform, rotate(180deg));
+        }
+
+        h4 {
+            margin: 0;
+        }
+    }
+} 

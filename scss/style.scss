@@ -1,0 +1,64 @@
+/*!
+Theme Name: Bizz Websites - Bizz Websites
+Author: Daniel Bisgrove
+Author URI: https://bizz-websites.com
+Description: A clean theme built for the compnay Bizz Websites
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Vars
+# Mixins
+# Base
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+--------------------------------------------------------------*/
+@font-face {
+	font-family: Metropolis;
+	font-weight: 400;
+	src: url("/fonts/Metropolis-Light.otf") format("opentype");
+	font-display: swap;
+}
+
+@font-face {
+    font-family: Metropolis;
+	font-weight: 500;
+	src: url("/fonts/Metropolis-Medium.otf") format("opentype");
+	font-display: swap;
+}
+
+@font-face {
+    font-family: Metropolis;
+	font-weight: 700;
+	src: url("/fonts/Metropolis-SemiBold.otf") format("opentype");
+	font-display: swap;
+}
+
+
+
+@import "_vars.scss";
+@import "_mixins.scss";
+@import "_normalise.scss";
+@import "_base.scss";
+@import "_buttons.scss";
+@import "_forms.scss";
+@import "_header.scss";
+@import "_footer.scss";
+
+// PAGES
+
+@import "/pages/_pages.scss";
+
+
+// COMPONENTS
+
+@import "/components/_components.scss";

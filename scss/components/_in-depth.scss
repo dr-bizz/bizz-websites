@@ -1,0 +1,110 @@
+.indepth {
+    padding: 50px 0 100px;
+
+    &.reverse {
+
+        .indepth--inner {
+            @include prefix(flex-direction, row-reverse);
+        }
+
+        .indepth--graph {
+            text-align: left;
+        }
+
+        .indepth--description {
+            @media (min-width: 901px) {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    &--inner {
+        margin-top: 50px;
+        @include flex();
+        justify-content: center;
+    }
+
+    &--description {
+        @include flex-child(60%);
+
+        @media (min-width: 901px) {
+            padding-right: 20px;
+        }
+
+        @media (max-width: 900px) {
+            max-width: 600px;
+            @include flex-child(100%);
+        }
+
+        h3 {
+            margin: 40px 0 0;
+            font-weight: 500;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+
+            img {
+                max-width: 33px;
+                vertical-align: middle;
+                margin-top: -3px;
+                margin-right: 10px;
+            }
+        }
+    }
+    &--graph {
+        text-align: right;
+        @include flex-child(40%);
+
+        @media (max-width: 900px) {
+            max-width: 600px;
+            @include flex-child(100%);
+        }
+
+        &--inner {
+            display: inline-block;
+            text-align: center;
+            background: $white;
+            border-radius: 7px;
+            box-shadow:  0px 8px 30px rgba(177, 177, 177, 0.25);
+            overflow: hidden;
+            @include prefix(transition, all 0.2s ease 0s);
+
+            @media (min-width: 901px) {
+                text-align: left;
+                max-width: 350px;
+            }
+
+            &:hover {
+                box-shadow: 0px 20px 30px rgba(95, 95, 95, 0.25);
+                @include prefix(transform, translate(0px, -10px));
+            }
+        }
+
+        &--text {
+            background: $white;
+            padding: 20px 20px 40px; 
+            position: relative;
+            z-index: 5;
+
+        }
+
+        img {
+            @include prefix(transition, all 0.3s ease 0s);
+            @include prefix(transform, scale(1));
+            position: relative;
+            z-index: 1;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-weight: 500;
+        }
+
+        &:hover {
+            img {
+                @include prefix(transform, scale(1.1));
+            }
+        }
+    }
+}

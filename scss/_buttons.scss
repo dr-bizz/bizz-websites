@@ -1,0 +1,100 @@
+.button, button {
+    position: relative;
+    display: inline-block;
+    padding: 16px 52px 16px 24px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: $white;
+    background:$secondary;
+    background: -moz-linear-gradient(206.12deg, #0570BE 14%, #5BDEFB 99.94%);
+    background: -webkit-linear-gradient(206.12deg, #0570BE 14%, #5BDEFB 99.94%);
+    background: linear-gradient(206.12deg, #0570BE 14%, #5BDEFB 99.94%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0570BE",endColorstr="#5BDEFB",GradientType=1);
+    border-radius: 4px;
+    @include prefix(transition, all 0.25s ease 0s);
+    border: 0;
+    outline: 0!important;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    @media (min-width: 768px) {
+        padding: 18px 80px 18px 44px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        right: 22px;
+        content: "→";
+        @include prefix(transition, right .15s ease);
+        @include prefix(transform, translateY(-50%));
+
+        @media (min-width: 768px) {
+            right: 34px;
+        }
+    }
+
+    &:hover {
+        @include prefix(transform, translateY(-1px));
+        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+
+        &:after {
+            right: 18px;
+            @media (min-width: 768px) {
+                right: 29px;
+            }
+            
+        }
+    }
+
+
+    &--white {
+        @extend .button;
+        background: $white;
+        color: $secondary;
+    }
+
+    &[disabled] {
+        opacity: 0.5;
+
+        &:hover {
+            @include prefix(transform, translateY(0));
+            box-shadow: none;
+
+            &:after {
+                right: 34px;
+            }
+        }
+    }
+}
+
+
+.link-text {
+    color: $secondary;
+    display: block;
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 30px 0 30px 0;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:after {
+        padding-left: 10px;
+        content: "→";
+        @include prefix(transition, right .15s ease);
+        @include prefix(transform, translateY(-50%));
+    }
+
+    &:hover {
+        color: $dark-dark-blue;
+    }
+}

@@ -1,0 +1,40 @@
+.hire-us {
+    padding: 50px 0;
+
+    &--form {
+        @include flex();
+        justify-content: space-between;
+
+        > div {                                                                                             
+            margin-top: 30px;
+        }
+    }
+
+    &--info {
+        @include flex-child(30%);
+
+        @media (max-width: 750px) {
+            @include flex-child(100%); 
+        }
+    }
+
+    .col-half {
+        @include flex-child(100%);
+        @media (min-width: 481px) {
+            @include flex-child(calc(50% - 15px));
+        }
+    }
+    .col-full {
+        @include flex-child(100%);
+    }
+
+    .button-holder {
+        text-align: right;;
+    }
+
+    &--submitted {
+        p {
+            font-size: 17px;
+        }
+    }
+}

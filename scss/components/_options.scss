@@ -1,0 +1,56 @@
+.options {
+    padding: 50px 0;
+
+    &--inner {
+        justify-content: space-evenly;
+        @include flex();
+
+        @media (min-width: 950px) {
+            margin: 60px 0;
+        }
+    }
+
+    &--item {
+        background: $white;
+        padding: 50px 20px 20px;
+        border-radius: 6px;
+        text-align: center;
+        position: relative;
+        max-width: 420px;
+        @include flex-child(50%);
+        @include prefix(transition, all 0.3s ease 0s);
+
+        @media (max-width: 950px) {
+            margin-top: 60px;
+            max-width: 620px;
+            @include flex-child(100%);
+        }
+
+        &:hover {
+            @include prefix(transform, translateY(-10px));
+        }
+
+        &:nth-child(1) {
+            background: #394768;
+            color: $white;
+
+            p {
+                color: $white;
+            }
+        }
+
+        svg, img {
+            max-width: 130px;
+            max-height: 130px;
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            @include prefix(transform, translateX(-50%));
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+    }
+}

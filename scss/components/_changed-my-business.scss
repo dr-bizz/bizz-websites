@@ -1,0 +1,140 @@
+.changed-my-business {
+    background: $lightest-blue;
+    padding: 50px 0;
+
+    .reviews {
+        margin-top: 50px;
+
+        &--section {
+            float: left;
+            padding-right: 40px;
+            width: 80%;
+
+            @media (max-width: 1200px) {
+                width: 70%;
+            }
+
+            @media (max-width: 850px) {
+                padding-right: 0px;
+                width: 100%;
+            }
+
+            &--graphic {
+                background: $white;
+                border-radius: 15px;
+                padding: 10px 15px;
+                width: 100%;
+
+                img {
+                    top: 0;
+                }
+
+                .logo {
+                    max-width: 230px;
+                    max-height: 65px;
+                }
+
+                h3 {
+                    margin: 0;
+                }
+
+
+            }
+
+            &--review {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            &--images {
+                @include flex();
+                justify-content: space-between;
+            }
+        }
+
+        &--toggle {
+            float: right;
+            width: 20%;
+            @media (max-width: 1200px) {
+                width: 30%;
+            }
+            @media (max-width: 850px) {
+                display: none;
+            }
+
+            > div {
+                color: $tertiary;
+                cursor: pointer;
+                border-radius: 4px;
+                padding: 8px 10px 8px 38px;
+                font-family: $secondary-font;
+                position: relative;
+                font-weight: 500;
+                font-size: 15px;;
+
+                &.active {
+                    background: $white;
+                }
+
+                img {
+                    position: absolute;
+                    left: 10px;
+                    max-width: 20px;
+                    top: 50%;
+                    @include prefix(transform, translateY(-50%));
+                }
+            }
+
+            &--mobile {
+                
+                @media(min-width: 851px) {
+                    display: none;
+                }
+
+                select {
+                    background-size: 12px;
+                }
+            }
+        }
+
+
+        .link-text {
+            color: $tertiary;
+            font-size: 14px;
+            padding: 10px 30px 10px 0;
+            text-align: right;
+            
+
+            @media(min-width: 851px) {
+                border-top: 2px solid $white;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &.white-bg {
+        background: $white;
+
+        .reviews {
+            &--section--graphic {
+                background: $lightest-blue;
+            }
+
+            &--toggle {
+                > div {
+                    color: $base-font-color;
+                    &.active {
+                        background: $lightest-blue;
+                    }
+                }
+            }
+        }
+    }
+
+}

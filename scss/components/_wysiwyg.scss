@@ -1,0 +1,9 @@
+.wysiwyg {
+    padding: 50px 0;
+
+    &.small {
+        .page-container {
+            max-width: 900px;
+        }
+    }
+}

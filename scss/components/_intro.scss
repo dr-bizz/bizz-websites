@@ -1,0 +1,200 @@
+
+// Intro
+
+.intro {
+    .page-container {
+        @media (min-width: 741px) {
+            @include flex();
+        }
+    }
+
+    &--left {
+        text-align: right;
+        padding-right: 50px;
+        @include flex-child(45%);
+
+        @media (max-width: 900px) {
+            @include flex-child(60%);
+        }
+
+        @media (max-width: 740px) {
+            text-align: left;
+            padding-right: 0px;
+            width: 100%;
+        }
+
+        h2 {
+            width: 100%;
+            padding-right: 53px;
+            position: relative;
+
+
+            @media (max-width: 1150px) {
+                padding-right: 45px;
+            }
+
+            @media (max-width: 740px) {
+                padding-right: 0px;
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            span {
+                font-family: $secondary-font;
+                font-weight: 500;
+                font-size: 25px;
+
+                @media (max-width: 1150px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 740px) {
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+
+            img {
+                max-width: 75px;
+                @media (min-width: 741px) {
+                    position: absolute;
+                    right: -37px;
+                    top: 50%;
+                    @include prefix(transform, translateY(-50%));
+                }
+    
+                @media (max-width: 1150px) and (min-width: 741px) {
+                    max-width: 60px;
+                    right: -30px;
+                }
+                
+            }
+        }
+
+
+        
+
+        &--bullets {
+            @media (max-width: 740px) {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            > span {
+                display: inline-block;
+                padding: 8px 0;
+                width: 100%;
+                vertical-align: middle;
+                position: relative;
+
+                @media (max-width:740px) {
+                    text-align: center;
+                }
+
+                span {
+                    font-family: $secondary-font;
+                    font-size: 15px;
+                    
+                    @media (min-width: 741px) {
+                        display: inline-block;
+                        width: 80%;
+                        vertical-align: middle;
+                    }
+
+                    @media (max-width: 740px) {
+                        display: block;
+                        padding-left: 40px;
+                        line-height: 27px;
+                    }
+                }
+            }
+
+            img {
+                max-width: 30px;
+                @media (min-width: 741px) {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: 10px;
+                }
+                @media (max-width: 740px) {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+
+        &--paragraph {
+            p {
+                font-size: 15px;
+                @media (max-width:740px) {
+                    text-align: center;
+                }
+            }
+        }
+
+        &--links {
+            @include flex();
+
+            .quick-link {
+                text-align: left;;
+                @include flex-child(50%);
+
+                @media (max-width:740px) {
+                    text-align: center;
+                }
+            }
+        }
+
+        
+
+        .link-text {
+            border-top: 2px solid $light-grey;
+            margin-top: 20px;
+
+            @media (max-width: 740px) {
+                text-align: center;
+            }
+        }
+    }
+
+    &--right {
+        @include flex-child(55%);
+        position: relative;
+
+        @media (max-width: 900px) {
+            @include flex-child(40%);
+        }
+
+        @media (max-width: 740px) {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        &--inner {
+            @media (min-width: 741px) {
+                position: absolute;
+                bottom: 105px;
+                left: 0;
+                width: 100%;
+            }
+            @media (min-width: 741px) and (max-width: 825px) {
+                bottom: 22px;
+            }
+            @include flex();
+            justify-content: center;
+        }
+
+        a {
+            @include flex-child(33.3%);
+
+            @media (max-width: 900px) and (min-width: 741px), (max-width: 550px) {
+                @include flex-child(50%);
+            }
+            
+            @media (max-width:740px) {
+                text-align: center;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,16 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M58 13C58 9.68629 60.6863 7 64 7H86C89.3137 7 92 9.68629 92 13V14H58V13Z" fill="#31ACDD"/>
+<rect x="27" y="15" width="95" height="123" rx="4" stroke="#31ACDD" stroke-width="6"/>
+<path d="M40 45.2318L43.9845 49L53 38" stroke="#31ACDD" stroke-width="2"/>
+<rect x="37" y="34" width="19" height="20" rx="1" stroke="#31ACDD" stroke-width="2"/>
+<line x1="62" y1="36" x2="109" y2="36" stroke="#31ACDD" stroke-width="4" stroke-linecap="round"/>
+<line x1="62" y1="44" x2="100" y2="44" stroke="#31ACDD" stroke-width="4" stroke-linecap="round"/>
+<path d="M40 75.2318L43.9845 79L53 68" stroke="#31ACDD" stroke-width="2"/>
+<rect x="37" y="64" width="19" height="20" rx="1" stroke="#31ACDD" stroke-width="2"/>
+<line x1="62" y1="66" x2="92" y2="66" stroke="#31ACDD" stroke-width="4" stroke-linecap="round"/>
+<path d="M40 105.232L43.9845 109L53 98" stroke="#31ACDD" stroke-width="2"/>
+<rect x="37" y="94" width="19" height="20" rx="1" stroke="#31ACDD" stroke-width="2"/>
+<line x1="62" y1="96" x2="105" y2="96" stroke="#31ACDD" stroke-width="4" stroke-linecap="round"/>
+<line x1="62" y1="104" x2="79" y2="104" stroke="#31ACDD" stroke-width="4" stroke-linecap="round"/>
+<line x1="62" y1="74" x2="107" y2="74" stroke="#31ACDD" stroke-width="4" stroke-linecap="round"/>
+</svg>

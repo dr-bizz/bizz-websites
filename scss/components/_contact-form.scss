@@ -1,0 +1,55 @@
+.contact {
+    padding: 50px 0;
+
+
+    .page-container {
+        @include flex();
+    }
+
+    &--form {
+        @include flex();
+        @include flex-child(70%);
+        justify-content: space-between;
+
+        @media (max-width: 750px) {
+            @include flex-child(100%); 
+        }
+
+        > div {                                                                                             
+            margin-top: 30px;
+        }
+
+        &--submitted {
+            padding: 15px;
+            background: $lightest-blue;
+            border-radius: 5px;
+            margin: 0;
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    &--info {
+        @include flex-child(30%);
+
+        @media (max-width: 750px) {
+            @include flex-child(100%); 
+        }
+    }
+
+    .col-half {
+        @include flex-child(100%);
+        @media (min-width: 481px) {
+            @include flex-child(calc(50% - 15px));
+        }
+    }
+    .col-full {
+        @include flex-child(100%);
+    }
+
+    .button-holder {
+        text-align: right;;
+    }
+}

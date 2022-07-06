@@ -1,0 +1,41 @@
+.feat-articles {
+    padding-top: 20px;
+
+    > h4 {
+        margin: 0 0 15px;
+    }
+
+    &--article {
+        border-top: 1px solid $primary;
+        @include prefix(transform, scale(1));
+        @include prefix(transition, all 0.3s ease);
+
+        &:hover {
+            @include prefix(transform, scale(1.07));
+        }
+
+        a {
+            @include flex();
+            text-decoration: none;
+            padding: 10px 0;
+        }
+
+        .article--image {
+            @include flex-child(30%);
+            padding: 0;
+
+            @media(max-width: 1000px) and (min-width: 501px) {
+                @include flex-child(20%);
+            }
+        }
+
+        .article--inner {
+            @include flex-child(70%);
+            padding-left: 10px;
+        }
+
+        h3 {
+            font-size: 15px;
+        }
+    }
+}

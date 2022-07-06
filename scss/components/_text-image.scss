@@ -1,0 +1,107 @@
+
+
+.text-image {
+    padding: 50px 0;
+    @include flex();
+
+    @media (max-width: 900px) {
+        justify-content: center;
+    }
+
+    &.reverse {
+        @include prefix(flex-direction, row-reverse);
+
+        @media (min-width: 900px) {
+            text-align: right;
+
+            .text-image--text {
+                padding-right: 25px;
+            }
+        
+            .text-image--image {
+                padding-left: 25px;
+                text-align: right;
+            }
+        }
+
+    }
+
+    &-container {
+        padding: 50px 0;
+
+        .button-container {
+            margin-top: 40px;
+        }
+    }
+
+    &--text,
+    &--image {
+        @include flex-child(50%);
+
+        @media (max-width: 900px) {
+            max-width: 600px;
+            @include flex-child(100%);
+        }
+    }
+
+    &--text {
+        margin-top: 20px;
+
+        @media (min-width: 900px) {
+            margin-top: 0;
+            padding-left: 25px;
+        }
+    }
+
+    &--image {
+        text-align: center;
+        @include prefix(transform, scale(1));
+        @include prefix(transition, all 0.3s ease 0s);
+
+        @media (min-width: 900px) {
+            padding-right: 25px;
+            margin-bottom: 15px;
+        }
+
+        &:hover {
+            @include prefix(transform, scale(1.03));
+        }
+    }
+
+    &--link {
+        border-top: 2px solid $light-grey;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+
+    h2 {
+        text-align: left;
+        margin: 0 0 20px 0;
+    }
+    p {
+        text-align: left;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        border-radius: 8px;
+        box-shadow: 27.1px 62.5px 125px -25px rgba(187, 187, 187, 0.5), 16.2px 37.5px 75px -37.5px rgba(0,0,0,0.6);
+
+        @media (max-width: 900px) {
+            box-shadow: -1px 1px 17px 0px rgba(187, 187, 187, 0.5), 0px 6px 75px -37.5px rgba(0, 0, 0, 0.6)
+        }
+        
+    }
+}
+
+.text-image:not(.reverse) img {
+    box-shadow: -27.1px 62.5px 125px -25px rgba(187, 187, 187, 0.5), -16.2px 37.5px 75px -37.5px rgba(0,0,0,0.6); 
+
+    @media (max-width: 900px) {
+        box-shadow: -1px 1px 17px 0px rgba(187, 187, 187, 0.5), 0px 6px 75px -37.5px rgba(0, 0, 0, 0.6)
+    }
+}

@@ -1,0 +1,109 @@
+.footer {
+    background: $dark-dark-blue;
+    color: #B4C0DD;
+    padding: 60px 0;
+
+    &--left {
+        float: left;
+        padding-right: 25px;
+        width: 43%;
+
+        @media (max-width: 950px) {
+            padding-right: 0;
+            width: 100%;
+        }
+
+        img {
+            max-width: 250px;
+            margin-bottom: 20px;
+
+            @media (max-width: 950px) {
+                margin-bottom: 0;
+            }
+        }
+
+        form {
+            max-width: 500px;
+            position: relative;
+
+            @media (max-width: 950px) {
+                max-width: none;
+            }
+        }
+
+        input[type="submit"] {
+            border-radius: 0px 6px 6px 0px;
+            cursor: pointer;
+            font-family: $secondary-font;
+            font-family: 600;
+            padding: 13px 20px 14px 5px;
+            width: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .form-group {
+            width: calc(100% - 101px);
+        }
+    }
+
+    &--right {
+        float: right;
+        padding-left: 25px;
+        width: 57%;
+        text-align: right;
+
+        @media (max-width: 950px) {
+            padding-left: 0;
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        ul {
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: top;
+            text-align: left;
+
+            @media (max-width: 950px) {
+                width: auto;
+                margin-left: 50px;
+            }
+
+            @media (max-width: 600px) {
+                margin: 20px 0 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        li {
+        }
+
+        h4 {
+            color: $lightest-blue;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin: 0 0 5px;
+        }
+
+        a {
+            color: #B4C0DD;
+            text-decoration: none;
+            font-family: $secondary-font;
+            font-size: 15px;
+            padding: 5px 0;
+            display: block;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+}

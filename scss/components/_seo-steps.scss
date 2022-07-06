@@ -1,0 +1,48 @@
+.seo-steps  {
+    padding: 50px 0;
+
+    &--inner {
+        @include flex();
+        justify-content: center;
+        max-width: 600px;
+        margin: 30px auto;
+    }
+
+    &--step {
+        border-radius: 6px;
+        padding: 0 5px;
+        text-decoration: none;
+        margin-bottom: 15px;
+        @include flex-child(50%);
+
+        @media (max-width: 550px) {
+            padding: 0 8px;
+            margin-bottom: 10px;
+            @include flex-child(100%);
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 9px -5px #3d3c40;       
+        }
+
+        h4 {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 10px 0;
+        }
+
+        span {
+            color: $white;
+            padding: 4px;
+            width: 30px;
+            display: inline-block;
+            text-align: center;
+            background: $tertiary;
+            border-radius: 100%;
+            margin-right: 10px;
+            font-size: 15px;
+            height: 30px;
+            vertical-align: middle;
+        }
+    }
+}

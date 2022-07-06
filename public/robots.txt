@@ -1,0 +1,3 @@
+user-agent: *
+Disallow: /api/
+Disallow: /server-side/

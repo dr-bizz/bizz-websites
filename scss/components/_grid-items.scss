@@ -1,0 +1,42 @@
+.grid {
+    padding: 50px 0;
+
+    &--inner {
+        @include flex();
+        justify-content: space-evenly;
+    }
+
+    &--item {
+        text-align: center;
+        padding: 15px;
+        max-width: 350px;
+        @include flex-child(33.3%);
+
+        @media (max-width: 850px) {
+            padding: 15px 10px;
+            @include flex-child(50%); 
+        }
+        @media (max-width: 550px) {
+            padding: 15px 0;
+            @include flex-child(100%); 
+        }
+
+        img {
+            max-width: 66px;
+            max-height: 66px;
+        }
+
+        h4 {
+            margin: 10px 0;
+            text-transform: capitalize;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .button-container {
+        margin-top: 40px;
+    }
+}

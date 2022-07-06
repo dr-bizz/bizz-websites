@@ -1,0 +1,14 @@
+.image {
+    text-align: center;
+    .page-container {
+        max-width: 750px;
+    }
+
+    &--caption {
+        width: 100%;
+        background: $lightest-blue;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 4px;
+    }
+}

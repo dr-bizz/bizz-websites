@@ -1,0 +1,324 @@
+
+body, p, span, li {
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea,
+p,
+span,
+li {
+	color: $base-font-color;
+	font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-family: $secondary-font;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+h1, .h1 {
+	font-size: 28px;
+	@media (max-width: $lap-start) {
+		font-size: 23px;
+	}
+}
+h2, .h2 {
+	font-size: 25px;
+	@media (max-width: $lap-start) {
+		font-size: 20px;
+	}
+}
+h3, .h3 {
+	font-size: 20px;
+	@media (max-width: $lap-start) {
+		font-size: 18px;
+	}
+}
+h4, .h4 {
+	font-size: 18px;
+	@media (max-width: $lap-start) {
+		font-size: 16px;
+	}
+}
+h5, .h5 {
+	font-size: 15px;
+}
+h6, .h6 {
+    font-size: 14px;
+}
+
+a {
+	color: $tertiary;
+	cursor: pointer;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+.page-container {
+	max-width: $page-wdith;
+	margin: 0 auto;
+	position: relative;
+    z-index: 3;
+	
+	@media (max-width: 1420px) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	&.col-2 {
+		@include flex();
+		.main {
+			@include flex-child(75%);
+			padding-right: 15px;
+
+			@media(max-width: 1000px) {
+				@include flex-child(100%);
+			}
+		}
+		.side {
+			@include flex-child(25%);
+			
+			@media(max-width: 1000px) {
+				@include flex-child(100%);
+			}
+		}
+	}
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;;
+	}
+}
+
+.article {
+	ul, ol {
+		margin: 0 0 1.5em 3em;
+	}
+
+	ul {
+		list-style: disc;
+	}
+
+	ol {
+		list-style: decimal;
+	}
+
+	li > ul,
+	li > ol {
+		margin-bottom: 0;
+		margin-left: 1.5em;
+	}
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+// Background colours
+
+.light-blue-bg {
+	background: $lightest-blue;
+}
+
+.white-bg {
+	background: $white;
+}
+
+.dark-bg {
+	background: $dark-dark-blue;
+	color: $white;
+
+	p, li, span, h2, h3, h4 {
+		color: $white;
+	}
+}
+
+
+.section--head {
+	margin-top: 0;
+	text-align: center;;
+	svg,img {
+		max-width: 66px;
+		max-height: 66px;
+
+		&.icon-large {
+			max-width: 115px;
+			max-height: 115px;
+		}
+	}
+
+	span {
+		font-family: $secondary-font;
+		display: block;
+		font-weight: 500;
+		text-transform: capitalize;
+		@extend .h2;
+	}
+}
+
+.section--body--text {
+	text-align: center;
+	max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.button-container {
+	text-align: center;
+
+	.button {
+		display: inline-block;
+	}
+}
+
+.tilt--above {
+	background: #ffffff;
+	position: relative;
+	padding: 10px 0 50px 0;
+
+	
+
+	&:before {
+		content: " ";
+		position: absolute;
+		width: 107%;
+		height: 300px;
+    	top: -30px;
+		left: 0;
+		background: #ffffff;
+		transform: rotate(-7deg);
+		-webkit-transform: rotate(-7deg);
+		-moz-transform: rotate(-7deg);
+		-ms-transform: rotate(-7deg);
+		-o-transform: rotate(-7deg);
+		z-index: 1;
+
+	}
+
+	&:after {
+		position: absolute;
+		width: 100%;
+		height: 130px;
+		content: " ";
+		top: 0;
+		left: 0;
+		background: $lightest-blue;
+		z-index: 0;
+	}
+
+	&.light-blue-bg {
+		background: $lightest-blue;
+		&:before {
+			background: $lightest-blue;
+		}
+		&:after {
+			background: #ffffff;
+		}
+	}
+}
+
+// Quick Link
+.quick-link {
+    font-family: $secondary-font;
+	text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+	line-height: 25px;
+	letter-spacing: 1px;
+    padding: 8px 0 8px 0px;
+
+    @media(max-width: 450px) {
+        font-size: 14px;
+        line-height: 20px;
+	}
+	
+	&:before {
+		content: " ";
+		width: 0px;
+		height: 2px;
+		background: #30a8dd;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		@include prefix(transition, width 0.5s ease);
+	}
+
+	&:hover:before {
+		width: 97%;
+	}
+}
+
+// Section Break
+
+.section-break {
+	height: 200px;
+}

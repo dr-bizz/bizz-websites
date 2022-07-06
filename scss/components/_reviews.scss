@@ -1,0 +1,123 @@
+.reviews {
+    padding: 50px 0;
+    .page-container {
+        @include flex()
+    }
+
+    &--quoted {
+        @include flex-child(100%);
+        text-align: center;
+        margin-top: 80px;
+
+        @media (min-width: 701px) {
+            @include flex-child(50%);
+            margin-top: 60px;
+        }
+
+        @media (min-width: 970px) {
+            @include flex-child(33.3%);
+        }
+
+        @media (min-width: 1201px) {
+            margin-top: 50px;
+        }
+
+        &:first-child,
+        &:nth-child(3n+4) {
+            @media (min-width: 970px) {
+                text-align: left;
+            }
+        }
+        &:nth-child(3n+3) {
+            @media (min-width: 970px) {
+                text-align: right;
+            }
+        }
+
+        &--inner {
+            border-radius: 11px;
+            background: $white;
+            display: inline-block;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            box-shadow:  0px 8px 30px rgba(177, 177, 177, 0.25);
+            @include prefix(transition, all .2s ease);
+
+            @media (min-width: 701px) {
+                max-width: 300px;
+            }
+
+            @media (min-width: 1201px), (max-width: 700px) {
+                max-width: 350px;
+            }
+
+            &:hover {
+                box-shadow: 0px 17px 30px rgba(101, 101, 101, 0.25);
+                @include prefix(transform, translateY(-10px));
+
+                img {
+                    @include prefix(transform, translateY(-10px))
+                }
+            }
+
+        }
+    }
+
+    img {
+        display: inline-block;
+        max-width: 130px;
+        border-radius: 6px;
+        position: relative;
+        top: -32px;
+        @include prefix(transition, all .2s ease);
+
+        
+    }
+
+    &--details {
+        margin-bottom: 6px;
+
+        h6 {
+            margin: 0;
+            color: $faded-blue;
+            position: relative;
+            z-index: 5;
+            @include prefix(transition, .2s ease 0s);
+
+        }
+
+        h4 {
+            margin: 0;
+            position: relative;
+            z-index: 5;
+            @include prefix(transition, .2s ease 0s);
+        }
+
+        a {
+            display: block;
+            padding: 7px 0;
+            text-decoration: none;
+            color: $tertiary;
+        }
+    }
+
+    &--readmore {
+        padding-top: 15px;
+        cursor: pointer;
+
+        span {
+            background: $secondary;
+            color: $white;
+            display: inline-block;
+            padding: 3px 15px;
+            min-width: 120px;
+            border-radius: 3px;
+        }
+    }
+
+    .button-container {
+        margin-top: 40px;
+    }
+}

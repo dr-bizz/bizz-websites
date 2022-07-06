@@ -1,0 +1,40 @@
+.main {
+    section.wysiwyg {
+        padding: 10px 0;
+
+        pre {
+
+            code {
+                display: block;
+                position: relative;
+                background: #eeeef0;
+                padding: 20px;
+                border-radius: 8px;
+
+                &.language-css:after {
+                    content: "CSS";
+                    position: absolute;
+                    right: 20px;
+                    top: 10px;
+                    opacity: 0.7;
+                }
+
+                &.language-html:after {
+                    content: "HTML";
+                    position: absolute;
+                    right: 20px;
+                    top: 10px;
+                    opacity: 0.7;
+                }
+
+                &.language-js:after {
+                    content: "JS";
+                    position: absolute;
+                    right: 20px;
+                    top: 10px;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}

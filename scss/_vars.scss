@@ -1,0 +1,55 @@
+$primary: #394768;
+$secondary: #31A8DD;
+$tertiary: #0671BF;
+
+$lightest-blue: #EAF6FD;
+$light-blue: $primary;
+$blue: $secondary;
+$dark-blue: $tertiary;
+$white: #ffffff;
+$faded-blue: #768098;
+$dark-dark-blue: #394768;
+$light-grey: #f1f7fb;
+
+
+
+$background-body: #fff;
+
+$base-font: 'Metropolis', 'Sans Serif';
+$secondary-font: 'Metropolis', 'Sans Serif';
+$font-size: 16px;
+
+$link: #b0bdc9;
+$link-visited: #b0bdc9;
+$link-hover: $primary;
+
+$base-font-color: #3d3c40;
+$base-font-family: $base-font;
+$base-line-height: 1.5;
+$base-font-size: 16px;
+
+
+$input-bg-color: #f4f7f9;
+
+
+$lap-start: 600px;
+$desk-start: 970px;
+$large-start: 1400px;
+
+
+$page-wdith: 1200px;
+$cms-page-width: 1000px;
+
+$columns: (
+	1: 100%,
+	2: 50%,
+	3: 33.33%,
+	4: 25%,
+	5: 20%,
+	6: 16.66%,
+	7: 14.28%,
+	8: 12.5%,
+	9: 11.11%
+);
+
+$columns__margin: 3.8
